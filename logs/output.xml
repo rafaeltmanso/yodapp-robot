@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-12-05T12:38:42.992972" rpa="false" schemaversion="5">
-<suite id="s1" name="Checkbox" source="C:\QAx\projects\yodapp-robot\tests\checkbox.robot">
-<test id="s1-t1" name="Deve marcar as techs que usam Appium" line="7">
-<kw name="Start Session" owner="base">
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-12-05T15:08:29.749700" rpa="false" schemaversion="5">
+<suite id="s1" name="Swipe" source="C:\QAx\projects\yodapp-robot\tests\swipe.robot">
+<test id="s1-t1" name="Deve remover o Darth Vader" line="12">
+<kw name="Start Session" owner="base" type="SETUP">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>http://localhost:4723</arg>
 <arg>platformName=Android</arg>
@@ -20,13 +20,13 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | No     | alias             |</doc>
-<status status="PASS" start="2025-12-05T12:38:45.023849" elapsed="6.029854"/>
+<status status="PASS" start="2025-12-05T15:08:29.933924" elapsed="5.933829"/>
 </kw>
-<status status="PASS" start="2025-12-05T12:38:45.023298" elapsed="6.030568"/>
+<status status="PASS" start="2025-12-05T15:08:29.933550" elapsed="5.934427"/>
 </kw>
 <kw name="Get Started" owner="base">
 <kw name="Log Source" owner="AppiumLibrary">
-<msg time="2025-12-05T12:38:53.328291" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+<msg time="2025-12-05T15:08:38.135415" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
 &lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2400"&gt;
   &lt;android.widget.FrameLayout index="0" package="com.qaxperience.yodapp" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2400]" displayed="true" a11y-important="true" screen-reader-focusable="false" drawing-order="0" showing-hint="false" text-entry-key="false" dismissable="false" a11y-focused="false" heading="false" live-region="0" context-clickable="false" content-invalid="false"&gt;
     &lt;android.widget.LinearLayout index="0" package="com.qaxperience.yodapp" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2337]" displayed="true" a11y-important="false" screen-reader-focusable="false" drawing-order="1" showing-hint="false" text-entry-key="false" dismissable="false" a11y-focused="false" heading="false" live-region="0" context-clickable="false" content-invalid="false"&gt;
@@ -46,236 +46,183 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
   &lt;/android.widget.FrameLayout&gt;
 &lt;/hierarchy&gt;</msg>
 <doc>Logs and returns the entire html source of the current page or frame.</doc>
-<status status="PASS" start="2025-12-05T12:38:51.054505" elapsed="2.273942"/>
+<status status="PASS" start="2025-12-05T15:08:35.868979" elapsed="2.266532"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
 <arg>Yodapp</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-12-05T12:38:53.328593" elapsed="2.850903"/>
+<status status="PASS" start="2025-12-05T15:08:38.135603" elapsed="2.525474"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
 <arg>${START}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-12-05T12:38:56.179626" elapsed="2.084149"/>
+<status status="PASS" start="2025-12-05T15:08:40.661227" elapsed="2.034996"/>
 </kw>
 <kw name="Click Text" owner="AppiumLibrary">
-<msg time="2025-12-05T12:39:02.656567" level="INFO">xpath criteria: //*[contains(@text,"QAX")]</msg>
+<msg time="2025-12-05T15:08:47.104029" level="INFO">xpath criteria: //*[contains(@text,"QAX")]</msg>
 <arg>${START}</arg>
 <doc>Clicks the text identified by ``text``.</doc>
-<status status="PASS" start="2025-12-05T12:38:58.263887" elapsed="4.392901"/>
+<status status="PASS" start="2025-12-05T15:08:42.696340" elapsed="4.407914"/>
 </kw>
-<status status="PASS" start="2025-12-05T12:38:51.054234" elapsed="11.602651"/>
+<status status="PASS" start="2025-12-05T15:08:35.868513" elapsed="11.235823"/>
 </kw>
 <kw name="Navigate to" owner="base">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-12-05T12:39:02.657709" level="INFO">${hamburger} = //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<msg time="2025-12-05T15:08:47.105045" level="INFO">${hamburger} = //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
 <var>${hamburger}</var>
 <arg>//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-12-05T12:39:02.657575" elapsed="0.000158"/>
+<status status="PASS" start="2025-12-05T15:08:47.104929" elapsed="0.000135"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2025-12-05T12:39:06.814517" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<msg time="2025-12-05T15:08:51.257780" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
 <arg>${hamburger}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2025-12-05T12:39:02.657814" elapsed="4.156779"/>
+<status status="PASS" start="2025-12-05T15:08:47.105122" elapsed="4.152796"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-12-05T12:39:06.815571" level="INFO">Clicking element '//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
-<msg time="2025-12-05T12:39:11.010696" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<msg time="2025-12-05T15:08:51.259148" level="INFO">Clicking element '//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<msg time="2025-12-05T15:08:55.436927" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
 <arg>${hamburger}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-05T12:39:06.814740" elapsed="4.196026"/>
+<status status="PASS" start="2025-12-05T15:08:51.258043" elapsed="4.178940"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-12-05T12:39:11.011127" level="INFO">${menu_item} = xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Check e Radio"]</msg>
+<msg time="2025-12-05T15:08:55.437238" level="INFO">${menu_item} = xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Star Wars"]</msg>
 <var>${menu_item}</var>
 <arg>xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="${item_text}"]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-12-05T12:39:11.010908" elapsed="0.000242"/>
+<status status="PASS" start="2025-12-05T15:08:55.437085" elapsed="0.000166"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2025-12-05T12:39:15.189502" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Check e Radio"]</msg>
+<msg time="2025-12-05T15:08:59.575834" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Star Wars"]</msg>
 <arg>${menu_item}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2025-12-05T12:39:11.011233" elapsed="4.178345"/>
+<status status="PASS" start="2025-12-05T15:08:55.437303" elapsed="4.138596"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-12-05T12:39:15.190533" level="INFO">Clicking element 'xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Check e Radio"]'.</msg>
-<msg time="2025-12-05T12:39:20.294057" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Check e Radio"]</msg>
+<msg time="2025-12-05T15:08:59.576568" level="INFO">Clicking element 'xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Star Wars"]'.</msg>
+<msg time="2025-12-05T15:09:05.238146" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Star Wars"]</msg>
 <arg>${menu_item}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-05T12:39:15.189715" elapsed="5.104422"/>
+<status status="PASS" start="2025-12-05T15:08:59.576013" elapsed="5.662192"/>
 </kw>
-<arg>Check e Radio</arg>
-<status status="PASS" start="2025-12-05T12:39:02.657302" elapsed="17.636900"/>
+<arg>Star Wars</arg>
+<status status="PASS" start="2025-12-05T15:08:47.104684" elapsed="18.133573"/>
 </kw>
+<kw name="Go to item" owner="base">
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
-<arg>Checkbox</arg>
+<arg>${item}</arg>
+<arg>${TIMEOUT}</arg>
 <doc>Waits until the ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-12-05T12:39:20.294378" elapsed="2.078026"/>
+<status status="PASS" start="2025-12-05T15:09:05.238603" elapsed="2.062954"/>
 </kw>
 <kw name="Click Text" owner="AppiumLibrary">
-<msg time="2025-12-05T12:39:26.540045" level="INFO">xpath criteria: //*[contains(@text,"Checkbox")]</msg>
-<arg>Checkbox</arg>
+<msg time="2025-12-05T15:09:12.711343" level="INFO">xpath criteria: //*[contains(@text,"Lista")]</msg>
+<arg>${item}</arg>
 <doc>Clicks the text identified by ``text``.</doc>
-<status status="PASS" start="2025-12-05T12:39:22.377644" elapsed="4.162485"/>
+<status status="PASS" start="2025-12-05T15:09:07.301677" elapsed="5.409735"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
-<arg>Marque as techs que usam Appium</arg>
+<arg>${checkpoint}</arg>
 <doc>Waits until the ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-12-05T12:39:26.542948" elapsed="2.060231"/>
+<status status="PASS" start="2025-12-05T15:09:12.711538" elapsed="2.087250"/>
 </kw>
-<kw name="Create List" owner="BuiltIn">
-<msg time="2025-12-05T12:39:28.603782" level="INFO">@{techs} = [ Ruby | Python | Java | Javascript | C# | Robot Framework ]</msg>
-<var>@{techs}</var>
-<arg>Ruby</arg>
-<arg>Python</arg>
-<arg>Java</arg>
-<arg>Javascript</arg>
-<arg>C#</arg>
-<arg>Robot Framework</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-12-05T12:39:28.603627" elapsed="0.000175"/>
+<arg>Lista</arg>
+<arg>Darth Vader</arg>
+<status status="PASS" start="2025-12-05T15:09:05.238438" elapsed="9.560427"/>
 </kw>
-<for flavor="IN">
-<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-12-05T15:09:14.799280" level="INFO">${element_xpath} = xpath=//android.widget.TextView[@text='@darthvader']/../../..//*[contains(@resource-id, 'indicator')]</msg>
+<var>${element_xpath}</var>
+<arg>xpath=//android.widget.TextView[@text='@darthvader']/../../..//*[contains(@resource-id, 'indicator')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-12-05T15:09:14.799135" elapsed="0.000161"/>
+</kw>
+<kw name="Get Element Location" owner="AppiumLibrary">
+<msg time="2025-12-05T15:09:18.966253" level="INFO">Element 'xpath=//android.widget.TextView[@text='@darthvader']/../../..//*[contains(@resource-id, 'indicator')]' location: {'x': 975, 'y': 615} </msg>
+<msg time="2025-12-05T15:09:18.966304" level="INFO">xpath criteria: //android.widget.TextView[@text='@darthvader']/../../..//*[contains(@resource-id, 'indicator')]</msg>
+<msg time="2025-12-05T15:09:18.966356" level="INFO">${element_location} = {'x': 975, 'y': 615}</msg>
+<var>${element_location}</var>
+<arg>${element_xpath}</arg>
+<doc>Returns the location of the element with the ``locator``.</doc>
+<status status="PASS" start="2025-12-05T15:09:14.799476" elapsed="4.166892"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-12-05T15:09:18.967031" level="INFO">${start_x} = 975</msg>
+<var>${start_x}</var>
+<arg>${element_location['x']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-12-05T15:09:18.966586" elapsed="0.000462"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-12-05T15:09:18.967604" level="INFO">${start_y} = 615</msg>
+<var>${start_y}</var>
+<arg>${element_location['y']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-12-05T15:09:18.967285" elapsed="0.000335"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-12-05T15:09:18.967967" level="INFO">${offset_x} = 325</msg>
+<var>${offset_x}</var>
+<arg>${start_x} - ${SWIPE_OFFSET}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-12-05T15:09:18.967795" elapsed="0.000187"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-12-05T15:09:18.968654" level="INFO">${offset_y} = 615</msg>
+<var>${offset_y}</var>
+<arg>${start_y}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-12-05T15:09:18.968538" elapsed="0.000129"/>
+</kw>
+<kw name="Swipe" owner="AppiumLibrary">
+<arg>start_x=${start_x}</arg>
+<arg>start_y=${start_y}</arg>
+<arg>end_x=${offset_x}</arg>
+<arg>end_y=${offset_y}</arg>
+<arg>duration=1000ms</arg>
+<doc>Swipes from one point to another point, for an optional ``duration``.</doc>
+<status status="PASS" start="2025-12-05T15:09:18.968808" elapsed="3.345946"/>
+</kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-12-05T12:39:28.605824" level="INFO">Clicking element 'xpath=//android.widget.CheckBox[contains(@text, 'Ruby')]'.</msg>
-<msg time="2025-12-05T12:39:32.788742" level="INFO">xpath criteria: //android.widget.CheckBox[contains(@text, 'Ruby')]</msg>
-<arg>xpath=//android.widget.CheckBox[contains(@text, '${tech}')]</arg>
+<msg time="2025-12-05T15:09:22.315555" level="INFO">Clicking element 'id=com.qaxperience.yodapp:id/btnRemove'.</msg>
+<msg time="2025-12-05T15:09:27.331965" level="INFO">criteria is com.qaxperience.yodapp:id/btnRemove</msg>
+<arg>id=com.qaxperience.yodapp:id/btnRemove</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-05T12:39:28.604537" elapsed="4.184284"/>
+<status status="PASS" start="2025-12-05T15:09:22.314969" elapsed="5.017054"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-05T12:39:33.289229" level="INFO">Slept 500 milliseconds.</msg>
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-05T12:39:32.788966" elapsed="0.500391"/>
-</kw>
-<var name="${tech}">Ruby</var>
-<status status="PASS" start="2025-12-05T12:39:28.604451" elapsed="4.684942"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-12-05T12:39:33.290332" level="INFO">Clicking element 'xpath=//android.widget.CheckBox[contains(@text, 'Python')]'.</msg>
-<msg time="2025-12-05T12:39:37.492607" level="INFO">xpath criteria: //android.widget.CheckBox[contains(@text, 'Python')]</msg>
-<arg>xpath=//android.widget.CheckBox[contains(@text, '${tech}')]</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-05T12:39:33.289572" elapsed="4.203113"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-05T12:39:37.993299" level="INFO">Slept 500 milliseconds.</msg>
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-05T12:39:37.492830" elapsed="0.500551"/>
-</kw>
-<var name="${tech}">Python</var>
-<status status="PASS" start="2025-12-05T12:39:33.289499" elapsed="4.703924"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-12-05T12:39:37.994088" level="INFO">Clicking element 'xpath=//android.widget.CheckBox[contains(@text, 'Java')]'.</msg>
-<msg time="2025-12-05T12:39:42.179171" level="INFO">xpath criteria: //android.widget.CheckBox[contains(@text, 'Java')]</msg>
-<arg>xpath=//android.widget.CheckBox[contains(@text, '${tech}')]</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-05T12:39:37.993587" elapsed="4.185640"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-05T12:39:42.679776" level="INFO">Slept 500 milliseconds.</msg>
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-05T12:39:42.179370" elapsed="0.500488"/>
-</kw>
-<var name="${tech}">Java</var>
-<status status="PASS" start="2025-12-05T12:39:37.993519" elapsed="4.686372"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-12-05T12:39:42.680605" level="INFO">Clicking element 'xpath=//android.widget.CheckBox[contains(@text, 'Javascript')]'.</msg>
-<msg time="2025-12-05T12:39:46.869929" level="INFO">xpath criteria: //android.widget.CheckBox[contains(@text, 'Javascript')]</msg>
-<arg>xpath=//android.widget.CheckBox[contains(@text, '${tech}')]</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-05T12:39:42.680042" elapsed="4.189967"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-05T12:39:47.370724" level="INFO">Slept 500 milliseconds.</msg>
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-05T12:39:46.870112" elapsed="0.500683"/>
-</kw>
-<var name="${tech}">Javascript</var>
-<status status="PASS" start="2025-12-05T12:39:42.679977" elapsed="4.690852"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-12-05T12:39:47.371692" level="INFO">Clicking element 'xpath=//android.widget.CheckBox[contains(@text, 'C#')]'.</msg>
-<msg time="2025-12-05T12:39:51.553438" level="INFO">xpath criteria: //android.widget.CheckBox[contains(@text, 'C#')]</msg>
-<arg>xpath=//android.widget.CheckBox[contains(@text, '${tech}')]</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-05T12:39:47.371076" elapsed="4.182434"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-05T12:39:52.054607" level="INFO">Slept 500 milliseconds.</msg>
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-05T12:39:51.553613" elapsed="0.501102"/>
-</kw>
-<var name="${tech}">C#</var>
-<status status="PASS" start="2025-12-05T12:39:47.371003" elapsed="4.683762"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-12-05T12:39:52.055817" level="INFO">Clicking element 'xpath=//android.widget.CheckBox[contains(@text, 'Robot Framework')]'.</msg>
-<msg time="2025-12-05T12:39:56.256423" level="INFO">xpath criteria: //android.widget.CheckBox[contains(@text, 'Robot Framework')]</msg>
-<arg>xpath=//android.widget.CheckBox[contains(@text, '${tech}')]</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-05T12:39:52.055004" elapsed="4.201495"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-05T12:39:56.757267" level="INFO">Slept 500 milliseconds.</msg>
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-05T12:39:56.256714" elapsed="0.500627"/>
-</kw>
-<var name="${tech}">Robot Framework</var>
-<status status="PASS" start="2025-12-05T12:39:52.054903" elapsed="4.702473"/>
-</iter>
-<var>${tech}</var>
-<value>@{techs}</value>
-<status status="PASS" start="2025-12-05T12:39:28.604314" elapsed="28.153084"/>
-</for>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-05T12:39:57.758025" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-05T12:39:56.757567" elapsed="1.000535"/>
+<kw name="Wait Until Page Does Not Contain" owner="AppiumLibrary">
+<arg>Darth Vader</arg>
+<doc>Waits until the ``text`` disappears from the current page.</doc>
+<status status="PASS" start="2025-12-05T15:09:27.332751" elapsed="2.076144"/>
 </kw>
 <kw name="Close Session" owner="base" type="TEARDOWN">
 <kw name="Close Application" owner="AppiumLibrary">
 <doc>Closes the current application and the webdriver session.</doc>
-<status status="PASS" start="2025-12-05T12:39:57.759622" elapsed="2.382174"/>
+<status status="PASS" start="2025-12-05T15:09:29.409674" elapsed="2.327606"/>
 </kw>
-<status status="PASS" start="2025-12-05T12:39:57.759184" elapsed="2.382706"/>
+<status status="PASS" start="2025-12-05T15:09:29.409472" elapsed="2.327872"/>
 </kw>
-<tag>checkbox</tag>
-<status status="PASS" start="2025-12-05T12:38:45.022530" elapsed="75.119545"/>
+<tag>swipe</tag>
+<status status="PASS" start="2025-12-05T15:08:29.933067" elapsed="61.804457"/>
 </test>
-<status status="PASS" start="2025-12-05T12:38:42.994869" elapsed="77.147815"/>
+<doc>Suite de testes para validação do gesto Swipe</doc>
+<status status="PASS" start="2025-12-05T15:08:29.750556" elapsed="61.987532"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">checkbox</stat>
+<stat pass="1" fail="0" skip="0">swipe</stat>
 </tag>
 <suite>
-<stat name="Checkbox" id="s1" pass="1" fail="0" skip="0">Checkbox</stat>
+<stat name="Swipe" id="s1" pass="1" fail="0" skip="0">Swipe</stat>
 </suite>
 </statistics>
 <errors>

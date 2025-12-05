@@ -8,7 +8,7 @@ ${TIMEOUT}    30
 
 *** Keywords ***
 Start Session
-    # Configurações de capability do Appium (Encapsuladas)
+    # Appium capability configuration (encapsulated)
     Open Application    http://localhost:4723
     ...                 platformName=Android
     ...                 deviceName=Android Emulator
@@ -28,19 +28,19 @@ Get Started
 
 Navigate to
     [Arguments]    ${item_text}
-    # Abre o menu de navegação e clica no item
+    # Opens the navigation menu and clicks on the item
     ${hamburger}    Set Variable    //android.widget.ImageButton[@content-desc="Open navigation drawer"]
     Wait Until Element Is Visible    ${hamburger}    ${TIMEOUT}
     Click Element    ${hamburger}
     
-    # Clica no item de menu dinâmico
+    # Clicks on the dynamic menu item
     ${menu_item}    Set Variable    xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="${item_text}"]
     Wait Until Element Is Visible    ${menu_item}    ${TIMEOUT}
     Click Element    ${menu_item}
 
 Go to item
     [Arguments]    ${item}    ${checkpoint}
-    # Clica no item e valida se chegou na tela certa
+    # Clicks on the item and validates if it navigated to the correct screen
     Wait Until Page Contains    ${item}    ${TIMEOUT}
     Click Text                  ${item}
     Wait Until Page Contains    ${checkpoint}
@@ -49,30 +49,30 @@ Close Session
     Close Application
 
 Validate Home Screen
-    # Validações da tela inicial
+    # Home screen validations
     Wait Until Page Contains    Yodapp    ${TIMEOUT}
     Wait Until Page Contains    Mobile Training
     Wait Until Page Contains    by Papito!
 
 Perform Long Click
-    # Implementa long press usando coordenadas dinâmicas
-    # Primeiro garante que está na tela "Clique longo"
-    Wait Until Page Contains    Clique longo    ${TIMEOUT}
+    # Performs long press using dynamic coordinates
+    # First ensures it's on the "Long Click" screen
+    Wait Until Page Contains    Long Click    ${TIMEOUT}
     
-    # Define o locator para o botão "Clique longo"
-    ${long_click_locator}    Set Variable    xpath=//*[@text="Clique longo"]
+    # Defines the locator for the "Long Click" button
+    ${long_click_locator}    Set Variable    xpath=//*[@text="Long Click"]
     
-    # Obtém as coordenadas dinâmicas do elemento
+    # Gets the dynamic coordinates of the element
     ${position}    Get Element Location    ${long_click_locator}
     Log    Position: ${position}    WARN
     
-    # Extrai x e y do dicionário retornado - tenta acesso simples
+    # Extracts x and y from the returned dictionary
     ${x}    Set Variable    ${position}[x]
     ${y}    Set Variable    ${position}[y]
     Log    X: ${x}, Y: ${y}    WARN
     
-    # Executa o tap longo com duração de 1000ms usando timedelta format
+    # Performs the long tap with 1000ms duration using timedelta format
     Tap With Positions    1000ms    ${x}    ${y}
     
-    # Valida que o long click funcionou
-    Wait Until Page Contains    Isso é um clique longo    ${TIMEOUT}
+    # Validates that the long click worked
+    Wait Until Page Contains    This is a long click    ${TIMEOUT}

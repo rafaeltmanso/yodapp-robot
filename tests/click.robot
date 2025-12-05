@@ -3,21 +3,21 @@ Resource    ../resources/base.resource
 Test Teardown    Close Session
 
 *** Test Cases ***
-Deve interagir com botoes
+Should Interact With Buttons
     Start Session
     Get Started
     Navigate to    Clique em Botões
-    Wait Until Page Contains    Clique longo    
-    Click Text                  Clique simples
+    Wait Until Page Contains    Long Click    
+    Click Text                  Simple Click
 
-Deve executar clique longo
+Should Execute Long Click
     [Tags]      long
 
     Start Session
     Get Started
     Navigate to    Clique em Botões
-    Go to item    Clique longo    Botão clique longo
+    Go to item    Long Click    Long Click Button
 
     ${locator}    Set Variable    id=com.qaxperience.yodapp:id/long_click
     Long Press   ${locator}    duration=1000
-    Wait Until Page Contains     Isso é um clique longo
+    Wait Until Page Contains     This is a long click

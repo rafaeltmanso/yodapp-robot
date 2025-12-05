@@ -3,6 +3,6 @@ Resource    ../resources/base.resource
 Test Teardown    Close Session
 
 *** Test Cases ***
-Deve abrir tela inicial com sucesso
+Should Successfully Open Home Screen
     Start Session
     Validate Home Screen
